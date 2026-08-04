@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1 rem is
+    font-size: 62.5%;
+}
+
+body {  // Questa classe ce sia qui che in typograpy, cioe vuoldire che si uniscono
+    box-sizing: border-box;
+}
