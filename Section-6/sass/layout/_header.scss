@@ -4,9 +4,14 @@
     background-image: linear-gradient(to right, rgba($color-primary-light, 0.8), rgb($color-primary-dark, 0.8)), url("../img/hero.jpg");
     background-size: cover;
     background-position: top;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
+
+    @include responde(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
 
     // E la stessa cosa che scriveresti in css ma che invece e tutto in una classe invece di creare una classe per ogni cosa.
     // Cosi invece creo una classe, che si chiama '(header)__logo-box', che e dentro la classe header perche e un componente del header

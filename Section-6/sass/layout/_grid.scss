@@ -1,22 +1,38 @@
 .row {
     max-width: $grid-width;
-    //background-color: aliceblue;
     margin: 0 auto;
 
     // Qui stiamo dicendo: applica il margin bottom tutti gli elementi apparte l'ultimo
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include responde(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include responde(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
     }
 
     @include clearfix;
 
     //^ Qui staimo dicendo: a tutti gli elementi che hanno una classe che inizia per 'col-' applica questi stili
     [class^="col-"] {
-        //background-color: orange;
         float: left;
         
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include responde(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include responde(tab-port) {
+            width: 100% !important;
         }
     }
 
