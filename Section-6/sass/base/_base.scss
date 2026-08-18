@@ -29,3 +29,8 @@ body {
     // Questa classe ce sia qui che in typograpy, cioe vuoldire che si uniscono
     box-sizing: border-box;
 }
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
