@@ -1,0 +1,54 @@
+/* METHOD 3: NAME GRID AREAS */
+.container {
+  background-color: #eee;
+  width: 1000px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr ) 200px;  
+  
+  grid-gap: 30px;
+
+  grid-template-areas: ". head head ."
+                       "box-1 box-2 box-3 side"
+                       "main main main side"
+                       "foot foot foot foot";
+}
+
+.item {
+  padding: 20px;
+  font-size: 30px;
+  font-display: sans-serif;
+  color: #fff;
+  background-color: red;
+}
+
+
+.item--1 {
+  grid-area: head;
+}
+
+.item--2 {
+  grid-area: box-1;
+}
+
+.item--3 {
+  grid-area: box-2;
+}
+
+.item--4 {
+  grid-area: box-3;
+}
+
+.item--5 {
+  grid-area: side;
+}
+
+.item--6 {
+  grid-area: main;
+}
+
+.item--7 {
+  grid-area: foot;
+}
